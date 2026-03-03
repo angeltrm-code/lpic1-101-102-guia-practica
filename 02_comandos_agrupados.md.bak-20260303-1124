@@ -1,0 +1,666 @@
+# LPIC-1 — Comandos agrupados y explicados
+
+> Guía rápida en formato resumido con los comandos, utilidades y archivos más importantes citados en los objetivos oficiales de LPIC-1 101 y 102, reorganizados por áreas prácticas.
+
+---
+
+## Cómo usar esta guía
+
+- Está pensada como **chuleta de estudio**.
+- Los comandos están **agrupados por función**, no por número de objetivo.
+- Cada entrada incluye una **explicación breve** para recordar para qué sirve.
+- Algunos elementos de la web oficial no son comandos, sino **archivos, variables o conceptos**; también se incluyen cuando son importantes para el examen.
+
+---
+
+# 1. Información del sistema y hardware
+
+## Identificación del sistema
+- `uname` — Muestra información del kernel y de la arquitectura del sistema.
+- `pwd` — Indica en qué directorio te encuentras.
+- `env` — Muestra variables de entorno activas.
+- `set` — Muestra variables y funciones de la shell.
+- `unset` — Elimina una variable o función del entorno actual.
+- `export` — Exporta variables al entorno de procesos hijos.
+- `type` — Indica qué es realmente un nombre de comando (alias, builtin, binario, función).
+- `which` — Muestra la ruta del ejecutable que se usaría al invocar un comando.
+- `history` — Muestra el historial de comandos de la shell.
+- `man` — Abre el manual de un comando o concepto.
+- `echo` — Imprime texto o el valor de variables.
+
+## Detección de hardware
+- `lspci` — Lista dispositivos conectados al bus PCI.
+- `lsusb` — Lista dispositivos USB detectados.
+- `lsmod` — Muestra módulos del kernel cargados actualmente.
+- `modprobe` — Carga o descarga módulos del kernel junto con sus dependencias.
+- `dmesg` — Muestra mensajes del kernel, útil para detectar hardware y eventos de arranque.
+
+## Rutas y pseudo-sistemas importantes
+- `/proc/` — Sistema virtual con información del kernel y procesos.
+- `/sys/` — Sistema virtual con información de dispositivos y controladores.
+- `/dev/` — Contiene archivos de dispositivo.
+- `.bash_history` — Archivo con el historial de comandos de Bash.
+
+---
+
+# 2. Arranque, apagado y control del sistema
+
+## Arranque y diagnóstico
+- `journalctl` — Consulta el journal de systemd, incluidos eventos de arranque.
+- `systemctl` — Administra servicios, targets y componentes de systemd.
+
+## Apagado y reinicio
+- `shutdown` — Programa o ejecuta un apagado o reinicio controlado.
+- `reboot` — Reinicia el sistema.
+- `halt` — Detiene el sistema.
+- `poweroff` — Apaga el equipo.
+- `acpid` — Demonio que gestiona eventos ACPI como pulsar el botón de apagado.
+
+## Conceptos clave que debes reconocer
+- `BIOS` — Firmware tradicional de arranque.
+- `UEFI` — Firmware moderno de arranque.
+- `bootloader` — Programa que carga el kernel.
+- `kernel` — Núcleo del sistema operativo.
+- `initramfs` — Sistema temporal cargado al inicio para preparar el arranque.
+- `init` — Primer proceso de espacio de usuario.
+- `SysVinit` — Sistema clásico de init basado en runlevels.
+- `systemd` — Sistema moderno de init y gestión de servicios.
+
+---
+
+# 3. Gestión de discos, particiones y sistemas de archivos
+
+## Particionado
+- `fdisk` — Gestiona particiones en discos con estilo MBR y algunas GPT.
+- `gdisk` — Gestiona particiones GPT.
+- `parted` — Herramienta avanzada para particiones y discos grandes.
+
+## Creación de sistemas de archivos y swap
+- `mkfs` — Crea un sistema de archivos en una partición o dispositivo.
+- `mkswap` — Prepara una partición o archivo para usarse como swap.
+- `mke2fs` — Crea sistemas de archivos ext2/ext3/ext4.
+
+## Comprobación e integridad
+- `fsck` — Verifica y repara sistemas de archivos.
+- `e2fsck` — Verifica y repara sistemas ext2/ext3/ext4.
+- `tune2fs` — Ajusta parámetros avanzados de sistemas ext.
+- `xfs_repair` — Repara sistemas de archivos XFS.
+- `xfs_fsr` — Reorganiza/extiende bloques en XFS para optimizarlo.
+- `xfs_db` — Depura e inspecciona sistemas XFS.
+- `du` — Muestra el espacio usado por archivos y directorios.
+- `df` — Muestra espacio libre y usado en sistemas montados.
+
+## Montaje
+- `mount` — Monta sistemas de archivos.
+- `umount` — Desmonta sistemas de archivos.
+- `blkid` — Muestra UUID, etiquetas y tipo de sistema de archivos.
+- `lsblk` — Muestra discos, particiones y estructura de bloques.
+
+## Archivos clave
+- `/etc/fstab` — Define montajes permanentes al arranque.
+- `/media/` — Punto habitual para montajes extraíbles.
+- `/boot` — Archivos relacionados con el arranque.
+- `/home` — Directorios personales de usuarios.
+- `/var` — Datos variables como logs, colas y cachés.
+- `/` — Raíz del sistema.
+- `swap` — Espacio de intercambio en disco.
+- `ESP` — Partición del sistema EFI usada por UEFI.
+
+---
+
+# 4. Gestores de arranque
+
+- `grub-install` — Instala GRUB en el disco o destino indicado.
+- `grub-mkconfig` — Genera el archivo de configuración de GRUB.
+
+## Archivos y conceptos asociados
+- `grub.cfg` — Archivo de configuración principal de GRUB 2.
+- `grub.conf` — Nombre clásico de configuración en algunas distros.
+- `menu.lst` — Archivo de configuración usado por GRUB Legacy.
+- `MBR` — Master Boot Record, zona tradicional de arranque en discos MBR.
+
+---
+
+# 5. Gestión de librerías compartidas
+
+- `ldd` — Muestra de qué librerías depende un ejecutable.
+- `ldconfig` — Actualiza la caché de librerías compartidas del sistema.
+
+## Archivos y variables
+- `/etc/ld.so.conf` — Configura rutas adicionales de búsqueda de librerías.
+- `LD_LIBRARY_PATH` — Variable que añade rutas temporales de búsqueda de librerías.
+
+---
+
+# 6. Gestión de paquetes
+
+## Paquetes Debian
+- `dpkg` — Gestiona paquetes `.deb` a bajo nivel.
+- `dpkg-reconfigure` — Reconfigura un paquete ya instalado.
+- `apt-get` — Instala, actualiza o elimina paquetes desde repositorios APT.
+- `apt-cache` — Consulta información de paquetes y repositorios.
+
+## Archivos Debian
+- `/etc/apt/sources.list` — Lista principal de repositorios APT.
+
+## Paquetes RPM
+- `rpm` — Gestiona paquetes RPM a bajo nivel.
+- `rpm2cpio` — Convierte un paquete RPM a formato cpio para extraer su contenido.
+- `yum` — Gestor clásico de paquetes RPM y repositorios.
+- `zypper` — Gestor de paquetes usado principalmente en SUSE/openSUSE.
+
+## Archivos RPM/YUM
+- `/etc/yum.conf` — Configuración global de YUM.
+- `/etc/yum.repos.d/` — Repositorios configurados para YUM/DNF.
+
+---
+
+# 7. Virtualización y entornos clonados
+
+## Conceptos a reconocer
+- `cloud-init` — Inicializa instancias y VMs al primer arranque.
+- Máquina virtual — Sistema operativo invitado aislado.
+- Contenedor Linux — Aislamiento a nivel de procesos/namespace.
+- Contenedor de aplicaciones — Contenedor centrado en una aplicación concreta.
+- ID de D-Bus — Identificador del sistema que puede necesitar regenerarse tras clonar.
+- Llaves de host SSH — Claves únicas del servidor SSH que deben revisarse en clones.
+
+---
+
+# 8. Manipulación de texto y filtros
+
+## Visualización y lectura
+- `cat` — Muestra el contenido de archivos.
+- `less` — Permite leer archivos largos página a página.
+- `head` — Muestra las primeras líneas de un archivo.
+- `tail` — Muestra las últimas líneas de un archivo.
+- `nl` — Muestra líneas numeradas.
+- `od` — Muestra contenido en formatos octal/hexadecimal y similares.
+
+## Transformación y filtrado
+- `cut` — Extrae columnas o campos de texto.
+- `paste` — Une líneas de varios archivos en columnas.
+- `tr` — Sustituye, elimina o comprime caracteres.
+- `sort` — Ordena líneas.
+- `uniq` — Elimina o cuenta líneas repetidas consecutivas.
+- `wc` — Cuenta líneas, palabras o bytes.
+- `split` — Divide un archivo en varios fragmentos.
+- `sed` — Editor de flujo para sustituir, borrar o transformar texto.
+
+## Archivos comprimidos leídos en flujo
+- `zcat` — Muestra contenido de archivos comprimidos con gzip.
+- `bzcat` — Muestra contenido de archivos comprimidos con bzip2.
+- `xzcat` — Muestra contenido de archivos comprimidos con xz.
+
+## Integridad
+- `md5sum` — Calcula hash MD5.
+- `sha256sum` — Calcula hash SHA-256.
+- `sha512sum` — Calcula hash SHA-512.
+
+---
+
+# 9. Gestión básica de archivos y directorios
+
+- `ls` — Lista archivos y directorios.
+- `cp` — Copia archivos o directorios.
+- `mv` — Mueve o renombra archivos o directorios.
+- `rm` — Elimina archivos o directorios.
+- `mkdir` — Crea directorios.
+- `rmdir` — Elimina directorios vacíos.
+- `touch` — Crea archivos vacíos o actualiza su marca temporal.
+- `find` — Busca archivos según nombre, tipo, permisos, fecha, etc.
+- `file` — Detecta el tipo de un archivo.
+
+## Archivado y copia de bajo nivel
+- `tar` — Empaqueta y extrae archivos en archivos tar.
+- `cpio` — Empaqueta y extrae archivos en formato cpio.
+- `dd` — Copia datos a bajo nivel entre dispositivos o archivos.
+
+## Compresión
+- `gzip` — Comprime con gzip.
+- `gunzip` — Descomprime archivos gzip.
+- `bzip2` — Comprime con bzip2.
+- `bunzip2` — Descomprime archivos bzip2.
+- `xz` — Comprime con xz.
+- `unxz` — Descomprime archivos xz.
+
+## Conceptos asociados
+- `file globbing` — Uso de comodines como `*`, `?` o `[]` para seleccionar archivos.
+
+---
+
+# 10. Redirecciones, tuberías y entrada/salida
+
+- `tee` — Muestra la salida y además la guarda en un archivo.
+- `xargs` — Construye argumentos para otro comando a partir de la entrada estándar.
+- `|` — Envía la salida de un comando a la entrada de otro.
+- `>` — Redirige la salida estándar a un archivo, sobrescribiéndolo.
+- `>>` — Redirige la salida estándar añadiendo al final del archivo.
+- `2>` — Redirige el error estándar.
+- `2>&1` — Une stderr con stdout.
+
+---
+
+# 11. Procesos, jobs y rendimiento
+
+## Procesos y jobs
+- `ps` — Muestra procesos en ejecución.
+- `top` — Muestra procesos activos y consumo en tiempo real.
+- `kill` — Envía señales a procesos por PID.
+- `killall` — Envía señales a procesos por nombre.
+- `pgrep` — Busca procesos por nombre o patrón.
+- `pkill` — Mata procesos por nombre o patrón.
+- `nohup` — Ejecuta un comando ignorando la señal de cierre de sesión.
+- `jobs` — Muestra trabajos de la shell actual.
+- `bg` — Reanuda un trabajo en segundo plano.
+- `fg` — Lleva un trabajo al primer plano.
+- `&` — Lanza un proceso en segundo plano.
+
+## Monitorización rápida
+- `free` — Muestra uso de memoria RAM y swap.
+- `uptime` — Muestra cuánto lleva encendido el sistema y su carga.
+- `watch` — Ejecuta repetidamente un comando mostrando su salida actualizada.
+
+## Multiplexores
+- `screen` — Permite mantener sesiones persistentes de terminal.
+- `tmux` — Multiplexor de terminal moderno y muy usado.
+
+## Prioridad
+- `nice` — Lanza un proceso con una prioridad distinta.
+- `renice` — Cambia la prioridad de un proceso ya iniciado.
+
+---
+
+# 12. Expresiones regulares y búsqueda en texto
+
+- `grep` — Busca patrones en archivos o entrada estándar.
+- `egrep` — Variante histórica de grep con expresiones regulares extendidas.
+- `fgrep` — Variante histórica de grep para búsquedas literales.
+- `sed` — También se usa para sustitución con expresiones regulares.
+- `regex(7)` — Página de manual con teoría de expresiones regulares.
+
+---
+
+# 13. Editores de texto
+
+## Vi/Vim
+- `vi` — Editor modal clásico obligatorio para LPIC.
+- `/` — Busca hacia adelante dentro de `vi`.
+- `?` — Busca hacia atrás dentro de `vi`.
+- `h` `j` `k` `l` — Movimiento básico en `vi`.
+- `i` — Inserta antes del cursor.
+- `a` — Inserta después del cursor.
+- `o` — Abre una nueva línea e inserta.
+- `d` — Borra texto.
+- `dd` — Borra una línea.
+- `y` — Copia texto.
+- `yy` — Copia una línea.
+- `p` — Pega texto.
+- `:w!` — Guarda forzando.
+- `:q!` — Sale sin guardar.
+- `ZZ` — Guarda y sale.
+
+## Variable asociada
+- `EDITOR` — Variable que define el editor preferido del usuario o sistema.
+
+---
+
+# 14. Permisos, propietarios y enlaces
+
+## Permisos y propiedad
+- `chmod` — Cambia permisos de archivos o directorios.
+- `chown` — Cambia propietario y opcionalmente grupo.
+- `chgrp` — Cambia el grupo asociado a un archivo.
+- `umask` — Define permisos por defecto para nuevos archivos/directorios.
+
+## Enlaces
+- `ln` — Crea enlaces duros o simbólicos.
+
+---
+
+# 15. Localización de archivos y FHS
+
+- `locate` — Busca archivos usando una base de datos previamente indexada.
+- `updatedb` — Actualiza la base de datos usada por `locate`.
+- `whereis` — Localiza binarios, código fuente y páginas man.
+- `which` — Localiza el ejecutable usado en el PATH.
+- `type` — Aclara si un comando es alias, builtin, función o binario.
+
+## Archivo asociado
+- `/etc/updatedb.conf` — Configuración del índice usado por `locate`.
+
+---
+
+# 16. Shell y personalización del entorno
+
+## Carga del entorno
+- `.` — Ejecuta un archivo en la shell actual.
+- `source` — Equivalente a `.` en Bash, carga un archivo en la shell actual.
+- `alias` — Crea alias de comandos.
+- `function` — Declara funciones en Bash.
+
+## Archivos de shell
+- `/etc/profile` — Configuración global de login shell.
+- `/etc/bash.bashrc` — Configuración global de Bash interactiva en algunas distros.
+- `~/.bash_profile` — Configuración de login shell del usuario.
+- `~/.bash_login` — Alternativa a `.bash_profile`.
+- `~/.profile` — Configuración genérica de login shell.
+- `~/.bashrc` — Configuración de Bash interactiva del usuario.
+- `~/.bash_logout` — Se ejecuta al cerrar una login shell.
+
+---
+
+# 17. Scripting en shell
+
+- `if` — Estructura condicional.
+- `for` — Bucle por elementos.
+- `while` — Bucle condicionado.
+- `test` — Evalúa condiciones lógicas o sobre archivos/cadenas.
+- `read` — Lee entrada desde teclado o stdin.
+- `seq` — Genera secuencias numéricas.
+- `exec` — Reemplaza la shell por otro proceso o redirige descriptores.
+- `&&` — Ejecuta el siguiente comando solo si el anterior tuvo éxito.
+- `||` — Ejecuta el siguiente comando si el anterior falló.
+
+---
+
+# 18. Usuarios, grupos y contraseñas
+
+- `useradd` — Crea usuarios.
+- `userdel` — Elimina usuarios.
+- `usermod` — Modifica cuentas de usuario.
+- `groupadd` — Crea grupos.
+- `groupdel` — Elimina grupos.
+- `groupmod` — Modifica grupos.
+- `passwd` — Cambia contraseñas.
+- `chage` — Gestiona caducidad y envejecimiento de contraseñas.
+- `getent` — Consulta bases de datos del sistema como passwd o group.
+
+## Archivos asociados
+- `/etc/passwd` — Base de datos principal de usuarios.
+- `/etc/shadow` — Contraseñas y políticas de caducidad.
+- `/etc/group` — Base de datos de grupos.
+- `/etc/skel/` — Plantilla para los directorios personales de nuevos usuarios.
+
+---
+
+# 19. Tareas programadas y automatización
+
+- `crontab` — Gestiona tareas programadas del usuario.
+- `at` — Programa una tarea para ejecutarse una sola vez.
+- `atq` — Lista trabajos pendientes de `at`.
+- `atrm` — Elimina trabajos de `at`.
+- `systemd-run` — Ejecuta comandos o crea tareas transitorias con systemd.
+- `systemctl` — También se usa para gestionar timers y servicios relacionados.
+
+## Archivos y rutas asociadas
+- `/etc/crontab` — Crontab global del sistema.
+- `/etc/cron.{d,daily,hourly,monthly,weekly}/` — Scripts y tareas periódicas del sistema.
+- `/var/spool/cron/` — Crontabs de usuarios.
+- `/etc/cron.allow` y `/etc/cron.deny` — Controlan quién puede usar cron.
+- `/etc/at.allow` y `/etc/at.deny` — Controlan quién puede usar at.
+
+---
+
+# 20. Localización, idioma y fecha/hora
+
+- `locale` — Muestra la configuración regional actual.
+- `tzselect` — Ayuda a seleccionar zona horaria.
+- `timedatectl` — Muestra o cambia hora, zona y sincronización.
+- `date` — Muestra o ajusta la fecha y hora.
+- `iconv` — Convierte texto entre distintas codificaciones.
+
+## Variables importantes
+- `LANG` — Idioma y locale por defecto.
+- `LC_ALL` — Fuerza todas las categorías regionales.
+- `LC_*` — Variables específicas por categoría regional.
+- `TZ` — Define zona horaria para un proceso o sesión.
+
+## Archivos y rutas
+- `/etc/timezone` — Zona horaria configurada en algunas distros.
+- `/etc/localtime` — Enlace o archivo con la zona horaria efectiva.
+- `/usr/share/zoneinfo/` — Base de datos de zonas horarias.
+
+## Codificaciones a reconocer
+- `UTF-8` — Codificación estándar actual.
+- `ASCII` — Codificación básica histórica.
+- `ISO-8859` — Familia de codificaciones antiguas de 8 bits.
+- `Unicode` — Estándar general de caracteres.
+
+---
+
+# 21. Registros y logging
+
+- `logger` — Envía mensajes al sistema de logs.
+- `journalctl` — Consulta logs del journal de systemd.
+- `systemd-cat` — Envía salida al journal de systemd.
+- `logrotate` — Gestiona rotación, compresión y retención de logs.
+
+## Archivos y rutas
+- `/etc/rsyslog.conf` — Configuración principal de rsyslog.
+- `/var/log/` — Directorio general de logs.
+- `/etc/logrotate.conf` — Configuración principal de logrotate.
+- `/etc/logrotate.d/` — Configuraciones adicionales de rotación.
+- `/etc/systemd/journald.conf` — Configuración del journal de systemd.
+- `/var/log/journal/` — Almacenamiento persistente del journal.
+
+---
+
+# 22. Hora y sincronización NTP
+
+- `hwclock` — Consulta o ajusta el reloj hardware.
+- `ntpd` — Demonio clásico de sincronización NTP.
+- `ntpdate` — Sincroniza hora con un servidor NTP manualmente.
+- `chronyc` — Cliente de control para Chrony.
+
+## Archivos y conceptos
+- `/etc/ntp.conf` — Configuración de NTP.
+- `/etc/chrony.conf` — Configuración de Chrony.
+- `pool.ntp.org` — Conjunto público de servidores NTP.
+
+---
+
+# 23. Correo y MTA
+
+- `newaliases` — Regenera la base de datos de aliases de correo.
+- `mail` — Envía o lee correo desde consola.
+- `mailq` — Muestra la cola de correo.
+
+## MTAs a reconocer
+- `postfix` — MTA muy usado en Linux.
+- `sendmail` — MTA clásico y también capa de compatibilidad.
+- `exim` — Otro MTA común.
+
+## Archivo asociado
+- `~/.forward` — Reenvío de correo de un usuario.
+
+---
+
+# 24. Impresión
+
+- `lpr` — Envía trabajos a la impresora.
+- `lpq` — Muestra la cola de impresión.
+- `lprm` — Elimina trabajos de impresión.
+
+## Entorno relacionado
+- `CUPS` — Sistema de impresión habitual en Linux.
+- `/etc/cups/` — Archivos de configuración de CUPS.
+- `lpd` — Interfaz legacy de impresión reconocida en LPIC.
+
+---
+
+# 25. Redes: configuración y diagnóstico
+
+## Identidad y configuración básica
+- `hostname` — Muestra o ajusta el nombre del host.
+- `hostnamectl` — Gestiona nombre de host y metadatos con systemd.
+- `nmcli` — Cliente en línea de comandos de NetworkManager.
+- `ifup` — Activa una interfaz de red según la configuración.
+- `ifdown` — Desactiva una interfaz de red según la configuración.
+
+## Diagnóstico y conectividad
+- `ip` — Herramienta moderna para interfaces, rutas y direcciones.
+- `ss` — Muestra sockets y conexiones activas.
+- `ping` — Comprueba conectividad IPv4/ICMP.
+- `ping6` — Comprueba conectividad IPv6.
+- `traceroute` — Muestra la ruta seguida por paquetes IPv4.
+- `traceroute6` — Variante IPv6 de traceroute.
+- `tracepath` — Traza rutas sin privilegios en muchos casos.
+- `tracepath6` — Variante IPv6 de tracepath.
+- `netcat` — Utilidad multiuso para probar puertos y conexiones TCP/UDP.
+- `ifconfig` — Herramienta clásica de interfaces, hoy considerada heredada.
+- `netstat` — Herramienta clásica de red, sustituida en gran parte por `ss`.
+- `route` — Herramienta clásica para rutas, sustituida en gran parte por `ip route`.
+
+## Archivos de red
+- `/etc/hostname` — Nombre persistente del host.
+- `/etc/hosts` — Resolución local estática de nombres.
+- `/etc/nsswitch.conf` — Orden de resolución de nombres y otras bases.
+- `/etc/resolv.conf` — Servidores DNS y opciones de resolución.
+- `/etc/services` — Puertos estándar asociados a servicios.
+
+## Conceptos de red
+- `IPv4` — Protocolo IP de 32 bits.
+- `IPv6` — Protocolo IP de 128 bits.
+- `TCP` — Protocolo orientado a conexión.
+- `UDP` — Protocolo no orientado a conexión.
+- `ICMP` — Protocolo de control y diagnóstico de red.
+- `Subnetting` — División de redes en subredes.
+
+---
+
+# 26. DNS en cliente
+
+- `host` — Consulta DNS simple.
+- `dig` — Herramienta avanzada de consultas DNS.
+- `getent` — También puede resolver nombres usando la configuración real del sistema.
+
+## Archivos relacionados
+- `/etc/hosts` — Resolución local antes o después del DNS según `nsswitch`.
+- `/etc/resolv.conf` — Configura resolvers DNS.
+- `/etc/nsswitch.conf` — Define el orden de resolución.
+
+---
+
+# 27. Seguridad de cuentas, sesiones y privilegios
+
+- `sudo` — Ejecuta comandos con privilegios delegados.
+- `su` — Cambia de usuario, normalmente a root.
+- `ulimit` — Limita recursos de procesos del usuario actual.
+- `who` — Muestra usuarios conectados.
+- `w` — Muestra usuarios conectados y qué están haciendo.
+- `last` — Muestra histórico de accesos.
+- `fuser` — Identifica qué proceso usa un archivo, directorio o puerto.
+- `lsof` — Lista archivos abiertos por procesos.
+- `nmap` — Escanea puertos y servicios de red.
+
+## Archivos de seguridad
+- `/etc/sudoers` — Configuración principal de sudo.
+- `/etc/nologin` — Impide logins normales cuando existe o según uso del sistema.
+- `/etc/hosts.allow` — Reglas de TCP Wrappers permitidas.
+- `/etc/hosts.deny` — Reglas de TCP Wrappers denegadas.
+- `/etc/xinetd.conf` — Configuración global de xinetd.
+- `/etc/xinetd.d/` — Servicios definidos para xinetd.
+- `/etc/inittab` — Archivo clásico de SysVinit/compatibilidad.
+- `/etc/init.d/` — Scripts clásicos de servicios.
+- `systemd.socket` — Unidades de activación por socket en systemd.
+
+---
+
+# 28. Cifrado, SSH y GnuPG
+
+## SSH
+- `ssh` — Cliente para acceso remoto seguro.
+- `ssh-keygen` — Genera pares de claves SSH.
+- `ssh-agent` — Mantiene claves privadas cargadas en memoria.
+- `ssh-add` — Añade claves al agente SSH.
+
+## Archivos SSH del usuario
+- `~/.ssh/id_rsa` / `id_rsa.pub` — Claves RSA privada/pública.
+- `~/.ssh/id_dsa` / `id_dsa.pub` — Claves DSA privada/pública.
+- `~/.ssh/id_ecdsa` / `id_ecdsa.pub` — Claves ECDSA privada/pública.
+- `~/.ssh/id_ed25519` / `id_ed25519.pub` — Claves Ed25519 privada/pública.
+- `~/.ssh/authorized_keys` — Claves públicas autorizadas para acceder a una cuenta.
+- `ssh_known_hosts` — Lista de claves conocidas de hosts remotos.
+
+## Claves de host del servidor
+- `/etc/ssh/ssh_host_rsa_key` y `.pub` — Clave de host RSA.
+- `/etc/ssh/ssh_host_dsa_key` y `.pub` — Clave de host DSA.
+- `/etc/ssh/ssh_host_ecdsa_key` y `.pub` — Clave de host ECDSA.
+- `/etc/ssh/ssh_host_ed25519_key` y `.pub` — Clave de host Ed25519.
+
+## GnuPG
+- `gpg` — Cifra, descifra, firma y verifica archivos o mensajes.
+- `gpg-agent` — Gestiona claves y caché de contraseñas para GnuPG.
+- `~/.gnupg/` — Directorio de configuración y claves de GnuPG.
+
+---
+
+# 29. Entorno gráfico y accesibilidad
+
+## X11 y sesión gráfica
+- `xhost` — Controla el acceso al servidor X.
+- `xauth` — Gestiona credenciales de autenticación para X11.
+
+## Archivos y variables
+- `/etc/X11/xorg.conf` — Configuración clásica de Xorg.
+- `/etc/X11/xorg.conf.d/` — Fragmentos de configuración de Xorg.
+- `~/.xsession-errors` — Registro de errores de sesión gráfica del usuario.
+- `DISPLAY` — Variable que indica qué pantalla X usar.
+- `X` — Servidor gráfico X11.
+
+## Escritorios y protocolos a reconocer
+- `KDE` — Entorno de escritorio.
+- `Gnome` — Entorno de escritorio.
+- `Xfce` — Entorno de escritorio ligero.
+- `XDMCP` — Protocolo de gestión remota de pantallas X.
+- `VNC` — Protocolo de escritorio remoto.
+- `Spice` — Protocolo de acceso remoto usado mucho en virtualización.
+- `RDP` — Protocolo remoto habitual en entornos Microsoft.
+
+## Accesibilidad
+- lector de pantalla — Convierte la interfaz en salida de voz.
+- pantalla braille — Permite acceso mediante dispositivo braille.
+- lupa de pantalla — Amplía zonas de la interfaz.
+- teclado en pantalla — Permite escribir sin teclado físico.
+- teclas pegajosas / lentas / rebote / conmutación — Funciones de accesibilidad del teclado.
+- teclas de ratón — Permiten mover el ratón con el teclado.
+- reconocimiento de voz — Control del sistema por voz.
+- temas de alto contraste — Mejoran visibilidad.
+
+---
+
+# 30. Conceptos que conviene memorizar aunque no sean comandos
+
+- uso de comillas simples — Evita expansión de variables y caracteres especiales en shell.
+- uso de comillas dobles — Permite expansión de variables pero protege espacios.
+- runlevels — Modos de arranque clásicos en SysVinit.
+- targets — Equivalente moderno en systemd.
+- stdin / stdout / stderr — Canales estándar de entrada, salida y error.
+- BRE / ERE — Tipos de expresiones regulares básicas y extendidas.
+- FHS — Estándar de jerarquía del sistema de archivos.
+
+---
+
+# Recomendación de estudio
+
+## Orden práctico para memorizar mejor
+1. **Comandos de shell, archivos, texto y procesos**.
+2. **Discos, permisos, montaje y paquetes**.
+3. **Usuarios, cron, logs y red**.
+4. **Seguridad, SSH, GPG y arranque**.
+
+## Método útil
+Para cada comando, aprende estas 4 cosas:
+- **qué hace**,
+- **cuándo se usa**,
+- **una sintaxis mínima**,
+- **un ejemplo real**.
+
+## Consejo LPIC
+No memorices solo nombres: intenta asociar cada comando con un problema real, por ejemplo:
+- “quiero ver procesos” → `ps`, `top`
+- “quiero buscar texto” → `grep`, `sed`
+- “quiero montar un disco” → `lsblk`, `blkid`, `mount`
+- “quiero revisar red” → `ip`, `ss`, `ping`, `dig`
+
