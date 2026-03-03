@@ -6,6 +6,8 @@
 **Temario base:** LPIC-1 101-500 y 102-500 (versión 5.0)  
 **Última revisión del repo:** 2026-03-03
 
+[Volver a README](README.md)
+
 ## Objetivo del proyecto
 
 Construir un conjunto de documentos modulares en Markdown para preparar los exámenes **LPIC-1 101 y 102**, cubriendo:

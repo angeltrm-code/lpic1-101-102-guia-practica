@@ -3,8 +3,27 @@
 **Temario base:** LPIC-1 101-500 y 102-500 (versión 5.0)  
 **Última revisión del repo:** 2026-03-03
 
+[![Licencia: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Ultimo commit (main)](https://img.shields.io/github/last-commit/angeltrm-code/lpic1-101-102-guia-practica/main?label=ultimo%20commit)](https://github.com/angeltrm-code/lpic1-101-102-guia-practica/commits/main)
+[![Estado: Study Guide / Active](https://img.shields.io/badge/Estado-Study%20Guide%20%7C%20Active-2ea44f)](https://github.com/angeltrm-code/lpic1-101-102-guia-practica)
+
 ## Descripción breve del proyecto
 Este repositorio reúne una guía de estudio en formato Markdown para preparar LPIC-1, con enfoque práctico y modular.
+
+## 🔎 Accesos rápidos
+- [00_indice_maestro.md](00_indice_maestro.md)
+- [simulacros/](simulacros/)
+- [11_labs_guiados.md](11_labs_guiados.md)
+- [13_checklist_preparacion_lpic1.md](13_checklist_preparacion_lpic1.md)
+- [12_chuleta_repaso_rapido.md](12_chuleta_repaso_rapido.md)
+
+## Tabla de contenidos
+- [Objetivo del repositorio](#objetivo-del-repositorio)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Orden recomendado de estudio](#orden-recomendado-de-estudio)
+- [Cómo usar este repositorio](#cómo-usar-este-repositorio)
+- [Estado actual del proyecto](#estado-actual-del-proyecto)
+- [Licencia](#licencia)
 
 ## Objetivo del repositorio
 Ofrecer una ruta clara para estudiar los exámenes **LPIC-1 101** y **LPIC-1 102**, combinando teoría, comandos, rutas clave, práctica guiada y repaso final.
