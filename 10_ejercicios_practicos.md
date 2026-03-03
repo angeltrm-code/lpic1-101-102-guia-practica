@@ -14,8 +14,11 @@
 ---
 
 ## Bloque 1. Navegación y manejo básico de archivos
+**Qué deberías haber leído antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [07_opciones_frecuentes.md](07_opciones_frecuentes.md)
 
 ### Ejercicio 1.1 — Crear una estructura de trabajo
+**Dificultad:** Básico
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `pwd`, `mkdir`, `cd`, `touch`, `ls`.
 
 **Tareas**
@@ -41,6 +44,8 @@
 ---
 
 ### Ejercicio 1.2 — Copiar, mover y eliminar
+**Dificultad:** Básico
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `cp`, `mv`, `rm`, `rmdir`.
 
 **Tareas**
@@ -60,6 +65,8 @@
 ---
 
 ### Ejercicio 1.3 — Rutas absolutas y relativas
+**Dificultad:** Básico
+**Tiempo estimado:** 10-20 min
 **Objetivo:** distinguir rutas absolutas y relativas.
 
 **Tareas**
@@ -75,8 +82,11 @@
 ---
 
 ## Bloque 2. Visualización y edición de texto
+**Qué deberías haber leído antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [07_opciones_frecuentes.md](07_opciones_frecuentes.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md)
 
 ### Ejercicio 2.1 — Crear y leer archivos
+**Dificultad:** Básico
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `echo`, redirecciones, `cat`, `less`, `head`, `tail`.
 
 **Tareas**
@@ -98,6 +108,8 @@
 ---
 
 ### Ejercicio 2.2 — Editar con un editor
+**Dificultad:** Básico
+**Tiempo estimado:** 5-10 min
 **Objetivo:** abrir, modificar y guardar con `nano` o `vi`.
 
 **Tareas**
@@ -113,8 +125,11 @@
 ---
 
 ## Bloque 3. Filtros y procesamiento de texto
+**Qué deberías haber leído antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [07_opciones_frecuentes.md](07_opciones_frecuentes.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md)
 
 ### Ejercicio 3.1 — Buscar información en `/etc/passwd`
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `grep`, `cut`, `awk`, `wc`.
 
 **Tareas**
@@ -135,6 +150,8 @@
 ---
 
 ### Ejercicio 3.2 — Excluir comentarios
+**Dificultad:** Básico
+**Tiempo estimado:** 5-10 min
 **Objetivo:** usar `grep -v`.
 
 **Tareas**
@@ -152,6 +169,8 @@
 ---
 
 ### Ejercicio 3.3 — Ordenar y contar duplicados
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `sort`, `uniq`, `tr`.
 
 **Tareas**
@@ -166,8 +185,11 @@
 ---
 
 ## Bloque 4. Búsqueda de archivos
+**Qué deberías haber leído antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [07_opciones_frecuentes.md](07_opciones_frecuentes.md)
 
 ### Ejercicio 4.1 — Buscar por nombre y tipo
+**Dificultad:** Básico
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `find`.
 
 **Tareas**
@@ -183,6 +205,8 @@
 ---
 
 ### Ejercicio 4.2 — Ejecutar acciones con `find`
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** usar `-exec`.
 
 **Tareas**
@@ -197,8 +221,11 @@
 ---
 
 ## Bloque 5. Permisos, propiedad y enlaces
+**Qué deberías haber leído antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [07_opciones_frecuentes.md](07_opciones_frecuentes.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md)
 
 ### Ejercicio 5.1 — Permisos básicos
+**Dificultad:** Básico
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `chmod`.
 
 **Tareas**
@@ -217,6 +244,8 @@
 ---
 
 ### Ejercicio 5.2 — Permisos numéricos
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** interpretar y aplicar permisos octales.
 
 **Tareas**
@@ -232,6 +261,8 @@
 ---
 
 ### Ejercicio 5.3 — Propietario y grupo
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `chown` y `chgrp`.
 
 **Tareas**
@@ -245,6 +276,8 @@
 ---
 
 ### Ejercicio 5.4 — Enlaces duros y simbólicos
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** diferenciar `ln` y `ln -s`.
 
 **Tareas**
@@ -261,8 +294,11 @@
 ---
 
 ## Bloque 6. Procesos y prioridades
+**Qué deberías haber leído antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [07_opciones_frecuentes.md](07_opciones_frecuentes.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md)
 
 ### Ejercicio 6.1 — Observar procesos
+**Dificultad:** Básico
+**Tiempo estimado:** 5-10 min
 **Objetivo:** practicar `ps`, `top`, `uptime`.
 
 **Tareas**
@@ -277,6 +313,8 @@
 ---
 
 ### Ejercicio 6.2 — Lanzar un proceso en segundo plano
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** entender foreground y background.
 
 **Tareas**
@@ -293,6 +331,8 @@
 ---
 
 ### Ejercicio 6.3 — Prioridades
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `nice` y `renice`.
 
 **Tareas**
@@ -307,8 +347,11 @@
 ---
 
 ## Bloque 7. Gestión de paquetes
+**Qué deberías haber leído antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md)
 
 ### Ejercicio 7.1 — Debian
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `apt` y `dpkg`.
 
 **Tareas**
@@ -327,6 +370,8 @@
 ---
 
 ### Ejercicio 7.2 — Rocky / Red Hat
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `rpm`, `yum` o `dnf`.
 
 **Tareas**
@@ -344,8 +389,11 @@
 ---
 
 ## Bloque 8. Discos, particiones y montaje
+**Qué deberías haber leído antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md)
 
 ### Ejercicio 8.1 — Identificar discos y sistemas de archivos
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `lsblk`, `blkid`, `df`, `du`.
 
 **Tareas**
@@ -360,6 +408,8 @@
 ---
 
 ### Ejercicio 8.2 — Montaje manual
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
 **Objetivo:** practicar `mount` y `umount`.
 
 **Tareas**
@@ -375,6 +425,8 @@
 ---
 
 ### Ejercicio 8.3 — Revisar `/etc/fstab`
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** interpretar montajes persistentes.
 
 **Tareas**
@@ -394,8 +446,11 @@
 ---
 
 ## Bloque 9. Usuarios, grupos y autenticación
+**Qué deberías haber leído antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md)
 
 ### Ejercicio 9.1 — Información de usuarios
+**Dificultad:** Básico
+**Tiempo estimado:** 5-10 min
 **Objetivo:** practicar `id`, `whoami`, `/etc/passwd`, `/etc/group`.
 
 **Tareas**
@@ -407,6 +462,8 @@
 ---
 
 ### Ejercicio 9.2 — Crear y modificar usuarios
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
 **Objetivo:** practicar `useradd`, `passwd`, `usermod`, `userdel`.
 
 **Tareas**
@@ -422,6 +479,8 @@
 ---
 
 ### Ejercicio 9.3 — Revisar shadow y shells
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** relacionar autenticación y entorno.
 
 **Tareas**
@@ -432,8 +491,11 @@
 ---
 
 ## Bloque 10. Shell y scripting
+**Qué deberías haber leído antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md)
 
 ### Ejercicio 10.1 — Variables y entorno
+**Dificultad:** Básico
+**Tiempo estimado:** 5-10 min
 **Objetivo:** practicar `echo`, `env`, `export`.
 
 **Tareas**
@@ -445,6 +507,8 @@
 ---
 
 ### Ejercicio 10.2 — Script simple
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** crear un script funcional.
 
 **Tareas**
@@ -462,6 +526,8 @@
 ---
 
 ### Ejercicio 10.3 — Parámetros posicionales
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** usar `$1`, `$2`, `$#`, `$0`.
 
 **Tareas**
@@ -478,8 +544,11 @@
 ---
 
 ## Bloque 11. Tareas programadas
+**Qué deberías haber leído antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md), [11_labs_guiados.md](11_labs_guiados.md)
 
 ### Ejercicio 11.1 — Cron de usuario
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** practicar `crontab -e` y `crontab -l`.
 
 **Tareas**
@@ -494,6 +563,8 @@
 ---
 
 ### Ejercicio 11.2 — At
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** programar una tarea única.
 
 **Tareas**
@@ -504,8 +575,11 @@
 ---
 
 ## Bloque 12. Logs y journal
+**Qué deberías haber leído antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md), [11_labs_guiados.md](11_labs_guiados.md)
 
 ### Ejercicio 12.1 — Revisar logs clásicos
+**Dificultad:** Básico
+**Tiempo estimado:** 10-20 min
 **Objetivo:** localizar registros del sistema.
 
 **Tareas**
@@ -517,6 +591,8 @@
 ---
 
 ### Ejercicio 12.2 — Journal de systemd
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** usar `journalctl`.
 
 **Tareas**
@@ -532,8 +608,11 @@
 ---
 
 ## Bloque 13. Red y resolución de problemas
+**Qué deberías haber leído antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md)
 
 ### Ejercicio 13.1 — Información básica de red
+**Dificultad:** Básico
+**Tiempo estimado:** 5-10 min
 **Objetivo:** practicar `ip`, `hostname`, `ss`.
 
 **Tareas**
@@ -545,6 +624,8 @@
 ---
 
 ### Ejercicio 13.2 — Conectividad y DNS
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** distinguir fallos de red y DNS.
 
 **Tareas**
@@ -558,6 +639,8 @@
 ---
 
 ### Ejercicio 13.3 — Configuración persistente
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** reconocer archivos de red.
 
 **Tareas**
@@ -572,8 +655,11 @@
 ---
 
 ## Bloque 14. Seguridad básica
+**Qué deberías haber leído antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md)
 
 ### Ejercicio 14.1 — SSH
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** reconocer cliente y configuración.
 
 **Tareas**
@@ -585,6 +671,8 @@
 ---
 
 ### Ejercicio 14.2 — sudo y privilegios
+**Dificultad:** Medio
+**Tiempo estimado:** 10-20 min
 **Objetivo:** entender delegación de privilegios.
 
 **Tareas**
@@ -595,6 +683,8 @@
 ---
 
 ### Ejercicio 14.3 — GPG o cifrado básico
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
 **Objetivo:** practicar cifrado sencillo.
 
 **Tareas**
@@ -606,8 +696,11 @@
 ---
 
 ## Bloque 15. Repaso integrado tipo LPIC
+**Qué deberías haber leído antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md), [11_labs_guiados.md](11_labs_guiados.md)
 
 ### Ejercicio 15.1 — Caso completo de administración básica
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
 **Objetivo:** combinar varias áreas.
 
 **Escenario**
@@ -633,6 +726,8 @@ Debes preparar un pequeño entorno de trabajo para un usuario nuevo.
 ---
 
 ### Ejercicio 15.2 — Diagnóstico de sistema
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
 **Objetivo:** revisar sistema como lo haría un admin junior.
 
 **Tareas**
@@ -651,6 +746,7 @@ Debes preparar un pequeño entorno de trabajo para un usuario nuevo.
 ---
 
 ## Bloque 16. Autoevaluación
+**Qué deberías haber leído antes:** [10_ejercicios_practicos.md](10_ejercicios_practicos.md), [11_labs_guiados.md](11_labs_guiados.md), [13_checklist_preparacion_lpic1.md](13_checklist_preparacion_lpic1.md)
 
 Después de resolver los ejercicios, deberías poder responder “sí” a estas preguntas:
 
@@ -674,6 +770,7 @@ Después de resolver los ejercicios, deberías poder responder “sí” a estas
 ---
 
 ## Bloque 17. Recomendación de uso dentro del proyecto
+**Qué deberías haber leído antes:** [10_ejercicios_practicos.md](10_ejercicios_practicos.md), [11_labs_guiados.md](11_labs_guiados.md), [12_chuleta_repaso_rapido.md](12_chuleta_repaso_rapido.md)
 
 Este archivo encaja muy bien después de:
 

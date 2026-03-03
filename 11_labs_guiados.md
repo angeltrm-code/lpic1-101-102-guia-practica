@@ -29,6 +29,14 @@
 ---
 
 ## Lab 1 — Archivos, directorios y rutas
+**Dificultad:** Básico
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [10_ejercicios_practicos.md](10_ejercicios_practicos.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario estándar de laboratorio (sudo opcional en este lab).
+- Terminal con acceso a tu `$HOME`.
+- No ejecutar en sistema de producción.
 
 ### Objetivo
 Practicar:
@@ -140,6 +148,14 @@ find .
 ---
 
 ## Lab 2 — Texto, redirecciones y filtros
+**Dificultad:** Medio
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [07_opciones_frecuentes.md](07_opciones_frecuentes.md), [10_ejercicios_practicos.md](10_ejercicios_practicos.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario estándar de laboratorio (sudo no requerido para la mayoría de pasos).
+- Terminal funcional y editor básico disponible.
+- No ejecutar en sistema de producción.
 
 ### Objetivo
 Practicar:
@@ -255,6 +271,14 @@ grep -v '^#' /etc/fstab | grep -v '^$'
 ---
 
 ## Lab 3 — Búsqueda, permisos y enlaces
+**Dificultad:** Medio
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [10_ejercicios_practicos.md](10_ejercicios_practicos.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario con sudo (si vas a probar `chown`/`chgrp`).
+- Terminal con permisos de escritura en tu `$HOME`.
+- No ejecutar cambios de propiedad en rutas críticas del sistema.
 
 ### Objetivo
 Practicar:
@@ -351,6 +375,14 @@ find . -type d
 ---
 
 ## Lab 4 — Procesos, foreground/background y prioridad
+**Dificultad:** Medio
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md), [10_ejercicios_practicos.md](10_ejercicios_practicos.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario estándar de laboratorio.
+- Terminal con comandos `ps`, `top`, `kill`, `nice` y `renice` disponibles.
+- No finalizar procesos del sistema fuera del lab.
 
 ### Objetivo
 Practicar:
@@ -442,6 +474,14 @@ kill PID
 ---
 
 ## Lab 5 — Paquetes en Debian y RPM
+**Dificultad:** Medio
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario con sudo para instalar paquetes.
+- Conectividad de red para actualizar/repositorios (si aplica).
+- No mezclar comandos de Debian y RPM en la misma distro.
 
 ### Objetivo
 Practicar:
@@ -530,6 +570,14 @@ rpm -ql bash | head
 ---
 
 ## Lab 6 — Discos, particiones, montaje y fstab
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado con snapshot previo.
+- Usuario con sudo (si haces montaje manual).
+- Dispositivo o partición de laboratorio opcional para montar.
+- No montar/desmontar particiones críticas del sistema de producción.
 
 ### Objetivo
 Practicar:
@@ -614,6 +662,14 @@ sudo mkdir -p /mnt/prueba
 ---
 
 ## Lab 7 — Usuarios, grupos y autenticación
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md), [10_ejercicios_practicos.md](10_ejercicios_practicos.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario con sudo para crear/modificar cuentas.
+- Terminal con acceso a `/etc/passwd`, `/etc/group` y `/etc/shadow` (con privilegios).
+- No usar cuentas reales de producción para este lab.
 
 ### Objetivo
 Practicar:
@@ -703,6 +759,14 @@ sudo userdel -r alumno_lpic
 ---
 
 ## Lab 8 — Shell, variables y scripting
+**Dificultad:** Medio
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md), [10_ejercicios_practicos.md](10_ejercicios_practicos.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario estándar de laboratorio.
+- Editor o shell con soporte para heredocs.
+- No ejecutar scripts no revisados en sistema de producción.
 
 ### Objetivo
 Practicar:
@@ -796,6 +860,14 @@ chmod u+x saludo.sh
 ---
 
 ## Lab 9 — Cron, at y automatización
+**Dificultad:** Medio
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md), [10_ejercicios_practicos.md](10_ejercicios_practicos.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario con permiso para editar su `crontab`.
+- Servicio `atd` disponible si vas a probar `at` (si aplica).
+- No dejar tareas de prueba activas al terminar.
 
 ### Objetivo
 Practicar:
@@ -887,6 +959,14 @@ ls -l /tmp/tarea_at_ok
 ---
 
 ## Lab 10 — Logs, journal, red y seguridad básica
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md), [10_ejercicios_practicos.md](10_ejercicios_practicos.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado.
+- Usuario con sudo (si consultas servicios o config SSH).
+- Conectividad de red para pruebas de DNS/conectividad (si aplica).
+- No exponer servicios SSH de laboratorio a redes no confiables.
 
 ### Objetivo
 Practicar:
@@ -996,6 +1076,14 @@ systemctl status sshd 2>/dev/null
 ---
 
 ## Lab 11 — Repaso integrado de administración básica
+**Dificultad:** Avanzado
+**Tiempo estimado:** 20-40 min
+**Qué deberías saber antes:** [10_ejercicios_practicos.md](10_ejercicios_practicos.md), [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md), [08_conceptos_clave_101.md](08_conceptos_clave_101.md), [09_conceptos_clave_102.md](09_conceptos_clave_102.md)
+**Prerequisitos**
+- VM o entorno de pruebas aislado con snapshot previo.
+- Usuario estándar de laboratorio (sudo opcional según validaciones extra).
+- Terminal con utilidades de archivos, permisos y compresión disponibles.
+- No reutilizar rutas de trabajo de otros entornos en producción.
 
 ### Objetivo
 Combinar varias áreas del temario en un único flujo.
