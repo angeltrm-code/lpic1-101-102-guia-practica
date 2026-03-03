@@ -1,4 +1,4 @@
-# 03 — Matriz objetivo → comandos (LPIC-1 101 y 102)
+﻿# 03 — Matriz objetivo → comandos (LPIC-1 101 y 102)
 
 > Documento de trabajo para el proyecto LPIC-1.
 > Conecta cada **objetivo oficial** con los **comandos, archivos y utilidades** que debes reconocer o practicar.
@@ -32,8 +32,6 @@
 - `lspci`
 - `lsusb`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **101.1**.
 
 ### 101.2 Arranque del sistema
 **Prioridad LPI:** 3
@@ -55,8 +53,6 @@
 - `SysVinit`
 - `systemd`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **101.2**.
 
 ### 101.3 Cambiar niveles de ejecución / objetivos de arranque y apagar o reiniciar el sistema
 **Prioridad LPI:** 3
@@ -74,8 +70,6 @@
 - `poweroff`
 - `acpid`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **101.3**.
 
 ---
 
@@ -101,8 +95,6 @@
 - `mount`
 - `umount`
 
-**Nota de estudio**
-- Este objetivo es más conceptual; conviene apoyarlo con práctica guiada aunque la lista oficial visible no detallase comandos.
 
 ### 102.2 Instalar un gestor de arranque
 **Prioridad LPI:** 2
@@ -120,8 +112,6 @@
 - `grub-mkconfig`
 - `MBR`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **102.2**.
 
 ### 102.3 Gestión de librerías compartidas
 **Prioridad LPI:** 1
@@ -137,8 +127,6 @@
 - `/etc/ld.so.conf`
 - `LD_LIBRARY_PATH`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **102.3**.
 
 ### 102.4 Gestión de paquetes Debian
 **Prioridad LPI:** 3
@@ -155,8 +143,6 @@
 - `apt-get`
 - `apt-cache`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **102.4**.
 
 ### 102.5 Gestión de paquetes RPM y YUM
 **Prioridad LPI:** 3
@@ -174,8 +160,6 @@
 - `yum`
 - `zypper`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **102.5**.
 
 ### 102.6 Linux como sistema virtualizado
 **Prioridad LPI:** 1
@@ -196,8 +180,6 @@
 - `free`
 - `lscpu`
 
-**Nota de estudio**
-- Este objetivo es más conceptual; conviene apoyarlo con práctica guiada aunque la lista oficial visible no detallase comandos.
 
 ---
 
@@ -227,8 +209,6 @@
 - `.bash_history`
 - `uso de comillas`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **103.1**.
 
 ### 103.2 Procesar secuencias de texto usando filtros
 **Prioridad LPI:** 2
@@ -259,8 +239,6 @@
 - `xzcat`
 - `zcat`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **103.2**.
 
 ### 103.3 Administración básica de archivos
 **Prioridad LPI:** 4
@@ -291,8 +269,6 @@
 - `unxz`
 - `uso de comodines (*file globbing*)`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **103.3**.
 
 ### 103.4 Uso de secuencias de texto, tuberías y redireccionamientos
 **Prioridad LPI:** 4
@@ -306,8 +282,6 @@
 - `tee`
 - `xargs`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **103.4**.
 
 ### 103.5 Crear, supervisar y matar procesos
 **Prioridad LPI:** 4
@@ -335,8 +309,6 @@
 - `screen`
 - `tmux`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **103.5**.
 
 ### 103.6 Modificar la prioridad de ejecución de los procesos
 **Prioridad LPI:** 2
@@ -352,8 +324,6 @@
 - `renice`
 - `top`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **103.6**.
 
 ### 103.7 Realizar búsquedas en archivos de texto usando expresiones regulares
 **Prioridad LPI:** 3
@@ -370,8 +340,6 @@
 - `sed`
 - `regex(7)`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **103.7**.
 
 ### 103.8 Edición básica de archivos
 **Prioridad LPI:** 3
@@ -402,8 +370,6 @@
 - `:q!`
 - `EDITOR`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **103.8**.
 
 ---
 
@@ -424,8 +390,6 @@
 - `mkfs`
 - `mkswap`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **104.1**.
 
 ### 104.2 Mantener la integridad de los sistemas de archivos
 **Prioridad LPI:** 2
@@ -446,8 +410,6 @@
 - `xfs_fsr`
 - `xfs_db`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **104.2**.
 
 ### 104.3 Controlar el montaje y desmontaje de los sistemas de archivos
 **Prioridad LPI:** 3
@@ -465,8 +427,6 @@
 - `blkid`
 - `lsblk`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **104.3**.
 
 ### 104.4 Eliminado
 **Prioridad LPI:** ?
@@ -482,8 +442,6 @@
 - `shred`
 - `wipefs`
 
-**Nota de estudio**
-- Este objetivo es más conceptual; conviene apoyarlo con práctica guiada aunque la lista oficial visible no detallase comandos.
 
 ### 104.5 Administración de permisos y propietarios de los archivos
 **Prioridad LPI:** 3
@@ -499,8 +457,6 @@
 - `chown`
 - `chgrp`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **104.5**.
 
 ### 104.6 Crear y cambiar enlaces duros y simbólicos
 **Prioridad LPI:** 2
@@ -514,8 +470,6 @@
 - `ln`
 - `ls`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **104.6**.
 
 ### 104.7 Encontrar archivos de sistema y ubicarlos en el lugar correspondiente
 **Prioridad LPI:** 2
@@ -534,8 +488,6 @@
 - `type`
 - `/etc/updatedb.conf`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **104.7**.
 
 ---
 
@@ -568,8 +520,6 @@
 - `function`
 - `alias`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **105.1**.
 
 ### 105.2 Personalización y escritura de scripts sencillos
 **Prioridad LPI:** 4
@@ -590,8 +540,6 @@
 - `||`
 - `&&`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **105.2**.
 
 ---
 
@@ -614,8 +562,6 @@
 - `DISPLAY`
 - `X`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **106.1**.
 
 ### 106.2 Escritorios gráficos
 **Prioridad LPI:** 1
@@ -633,8 +579,6 @@
 - `echo $DISPLAY`
 - `systemctl --user`
 
-**Nota de estudio**
-- Este objetivo es más conceptual; conviene apoyarlo con práctica guiada aunque la lista oficial visible no detallase comandos.
 
 ### 106.3 Accesibilidad
 **Prioridad LPI:** 1
@@ -653,8 +597,6 @@
 - `locale`
 - `localectl`
 
-**Nota de estudio**
-- Este objetivo es más conceptual; conviene apoyarlo con práctica guiada aunque la lista oficial visible no detallase comandos.
 
 ---
 
@@ -683,8 +625,6 @@
 - `userdel`
 - `usermod`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **107.1**.
 
 ### 107.2 Automatizar tareas administrativas del sistema mediante la programación de trabajos
 **Prioridad LPI:** 4
@@ -709,8 +649,6 @@
 - `systemctl`
 - `systemd-run`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **107.2**.
 
 ### 107.3 Localización e internacionalización
 **Prioridad LPI:** 3
@@ -738,8 +676,6 @@
 - `ASCII`
 - `Unicode`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **107.3**.
 
 ---
 
@@ -767,8 +703,6 @@
 - `chronyc`
 - `pool.ntp.org`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **108.1**.
 
 ### 108.2 Registros del sistema
 **Prioridad LPI:** 4
@@ -790,8 +724,6 @@
 - `/etc/systemd/journald.conf`
 - `/var/log/journal/`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **108.2**.
 
 ### 108.3 Conceptos básicos del Agente de Transferencia de Correo
 **Prioridad LPI:** 3
@@ -810,8 +742,6 @@
 - `sendmail`
 - `exim`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **108.3**.
 
 ### 108.4 Gestión de la impresión y de las impresoras
 **Prioridad LPI:** 2
@@ -826,8 +756,6 @@
 - `/etc/cups/`
 - `interfaz legacy de lpd (lpr, lprm, lpq)`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **108.4**.
 
 ---
 
@@ -850,8 +778,6 @@
 - `UDP`
 - `ICMP`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **109.1**.
 
 ### 109.2 Configuración de red persistente
 **Prioridad LPI:** 4
@@ -871,8 +797,6 @@
 - `ifup`
 - `ifdown`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **109.2**.
 
 ### 109.3 Resolución de problemas básicos de red
 **Prioridad LPI:** 4
@@ -897,8 +821,6 @@
 - `netstat`
 - `route`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **109.3**.
 
 ### 109.4 Configuración DNS en el lado del cliente
 **Prioridad LPI:** 2
@@ -916,8 +838,6 @@
 - `dig`
 - `getent`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **109.4**.
 
 ---
 
@@ -948,8 +868,6 @@
 - `w`
 - `last`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **110.1**.
 
 ### 110.2 Configuración de la seguridad del sistema
 **Prioridad LPI:** 3
@@ -971,8 +889,6 @@
 - `/etc/hosts.allow`
 - `/etc/hosts.deny`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **110.2**.
 
 ### 110.3 Protección de datos mediante cifrado
 **Prioridad LPI:** 4
@@ -1001,8 +917,6 @@
 - `gpg-agent`
 - `~/.gnupg/`
 
-**Nota de estudio**
-- Prioriza reconocer y saber situar estos elementos dentro del objetivo **110.3**.
 
 ---
 

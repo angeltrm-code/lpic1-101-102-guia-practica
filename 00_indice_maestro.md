@@ -3,6 +3,9 @@
 > Este archivo actúa como **punto de entrada** del proyecto de estudio LPIC-1.  
 > Su objetivo es dejar todos los `.md` organizados, con una descripción clara y un **orden recomendado de lectura, práctica y repaso**.
 
+**Temario base:** LPIC-1 101-500 y 102-500 (versión 5.0)  
+**Última revisión del repo:** 2026-03-03
+
 ## Objetivo del proyecto
 
 Construir un conjunto de documentos modulares en Markdown para preparar los exámenes **LPIC-1 101 y 102**, cubriendo:
@@ -45,47 +48,54 @@ Material para repasar rápido y medir el estado real de preparación.
 
 ## Archivos del proyecto
 
-### `00_indice_maestro.md` — Índice general del proyecto
+### [00_indice_maestro.md](00_indice_maestro.md) — Índice general del proyecto
 Mapa de navegación del proyecto LPIC-1. Explica qué contiene cada archivo y en qué orden conviene usarlo.
 
-### `01_objetivos_desarrollados.md` — Objetivos desarrollados
+### [01_objetivos_desarrollados.md](01_objetivos_desarrollados.md) — Objetivos desarrollados
 Desarrollo de los objetivos oficiales de LPIC-1 (101 y 102), organizado por examen, tema y objetivo.
 
-### `02_comandos_agrupados.md` — Comandos agrupados
+### [02_comandos_agrupados.md](02_comandos_agrupados.md) — Comandos agrupados
 Listado de comandos agrupados por áreas funcionales, con explicación breve.
 
-### `03_matriz_objetivo_comandos.md` — Matriz objetivo → comandos
+### [03_matriz_objetivo_comandos.md](03_matriz_objetivo_comandos.md) — Matriz objetivo → comandos
 Relaciona cada objetivo oficial con los comandos, archivos y utilidades que conviene reconocer o practicar.
 
-### `04_matriz_comando_objetivo.md` — Matriz comando → objetivo
+### [04_matriz_comando_objetivo.md](04_matriz_comando_objetivo.md) — Matriz comando → objetivo
 Matriz inversa para estudiar cada comando y ver en qué objetivos del temario encaja.
 
-### `05_rutas_y_ficheros_clave.md` — Rutas y ficheros clave
+### [05_rutas_y_ficheros_clave.md](05_rutas_y_ficheros_clave.md) — Rutas y ficheros clave
 Guía de rutas, directorios y archivos importantes para LPIC-1, con explicación breve y prioridad de estudio.
 
-### `06_comandos_con_sintaxis_y_ejemplos.md` — Comandos con sintaxis y ejemplos
+### [06_comandos_con_sintaxis_y_ejemplos.md](06_comandos_con_sintaxis_y_ejemplos.md) — Comandos con sintaxis y ejemplos
 Guía práctica de comandos con sintaxis base, ejemplos y notas de uso.
 
-### `07_opciones_frecuentes.md` — Opciones frecuentes
+### [07_opciones_frecuentes.md](07_opciones_frecuentes.md) — Opciones frecuentes
 Resumen de flags y opciones cortas/largas que más se repiten en comandos habituales del examen.
 
-### `08_conceptos_clave_101.md` — Conceptos clave 101
+### [08_conceptos_clave_101.md](08_conceptos_clave_101.md) — Conceptos clave 101
 Resumen teórico guiado de la parte conceptual del examen 101.
 
-### `09_conceptos_clave_102.md` — Conceptos clave 102
+### [09_conceptos_clave_102.md](09_conceptos_clave_102.md) — Conceptos clave 102
 Resumen teórico guiado de la parte conceptual del examen 102.
 
-### `10_ejercicios_practicos.md` — Ejercicios prácticos
+### [10_ejercicios_practicos.md](10_ejercicios_practicos.md) — Ejercicios prácticos
 Colección de ejercicios por bloques para practicar en terminal los contenidos del temario.
 
-### `11_labs_guiados.md` — Labs guiados
+### [11_labs_guiados.md](11_labs_guiados.md) — Labs guiados
 Mini laboratorios paso a paso, reproducibles, para practicar LPIC-1 en una VM.
 
-### `12_chuleta_repaso_rapido.md` — Chuleta de repaso rápido
+### [12_chuleta_repaso_rapido.md](12_chuleta_repaso_rapido.md) — Chuleta de repaso rápido
 Documento condensado para refrescar comandos, conceptos y rutas clave antes de examen o práctica.
 
-### `13_checklist_preparacion_lpic1.md` — Checklist de preparación
+### [13_checklist_preparacion_lpic1.md](13_checklist_preparacion_lpic1.md) — Checklist de preparación
 Checklist de autoevaluación para medir progreso, detectar huecos y planificar repaso.
+
+### Simulacros tipo examen
+Preguntas y casos prácticos que imitan el formato real LPIC-1, con soluciones al final.
+
+- [simulacros/simulacro_101.md](simulacros/simulacro_101.md) — Simulacro del examen 101
+- [simulacros/simulacro_102.md](simulacros/simulacro_102.md) — Simulacro del examen 102
+- [simulacros/plantilla_correccion.md](simulacros/plantilla_correccion.md) — Plantilla de corrección
 
 
 ---
@@ -287,7 +297,7 @@ A partir de aquí, este conjunto de `.md` puede servir para:
 - convertirlo en un manual más grande
 - generar una guía PDF o DOCX
 - construir un plan de estudio semanal
-- preparar simulacros de examen
+- usar los simulacros incluidos para medir preparación
 - crear tarjetas de memorización o flashcards
 - hacer una versión resumida por examen 101 / 102
 

@@ -10,6 +10,12 @@
 - Finalmente practica con los **ejemplos**.
 - No hace falta dominar todas las opciones avanzadas al principio, pero sí entender el uso típico.
 
+**Aviso importante sobre el alcance:**
+Este documento agrupa los comandos por utilidad práctica y mezcla comandos oficiales del temario con herramientas complementarias.
+- **(LPI):** citado en objetivos oficiales.
+- **(Extra):** añadido para práctica.
+*(Para consultar exactamente en qué objetivo cae cada comando LPI, usa los archivos `01_objetivos_desarrollados.md` y `03_matriz_objetivo_comandos.md`)*.
+
 ---
 
 ## 1. Información del sistema y hardware
